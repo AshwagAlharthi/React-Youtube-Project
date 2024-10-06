@@ -143,6 +143,10 @@ function VideoPage() {
     getCommentInfo();
   }, []);
 
+  // useEffect(() => {
+  //   window.scrollTo(0,0);
+  // }, [getData]);
+
   useEffect(() => {
     getRecommendedInfo();
   }, []);
@@ -322,9 +326,9 @@ function VideoPage() {
                 </div>
                 <div className="w-full flex justify-between items-start">
                   <div className="h-full ">
-                    <div className="btn-circle w-11 h-11 flex justify-center items-center max-sm:w-6 max-sm:h-6 max-sm:text-[0.7rem] bg-slate-500">
+                    <div className="btn-circle w-11 h-11 flex justify-center items-center max-sm:w-6 max-sm:h-6 max-sm:text-[0.7rem] bg-slate-100">
                       {/* <img src={item.snippet.thumbnails.default.url} /> */}
-                      @@
+                      
                     </div>
                   </div>
                   <div className="flex flex-col justify-center items-center gap-2 w-[95%] ">
@@ -388,10 +392,10 @@ function VideoPage() {
                       >
                         <div className="w-full flex justify-between items-start ">
                           <div className="h-full ">
-                            <div className="btn-circle w-11 h-11 flex justify-center items-center max-sm:w-6 max-sm:h-6 max-sm:text-[0.7rem] ">
+                            <div className="btn-circle w-11 h-11 flex justify-center items-center max-sm:w-6 max-sm:h-6 max-sm:text-[0.7rem] bg-slate-100">
                               <img
                                 className="btn-circle w-full h-full"
-                                src="{}"
+                                // src="{}"
                               />
                               {/* @@ */}
                             </div>
@@ -549,7 +553,10 @@ function VideoPage() {
                               </details>
                             </div>
                             <p className="text-black text-[0.9rem] max-sm:text-[0.45rem]">
-                              {item.snippet.topLevelComment.snippet.textDisplay}
+                              {/* {item.snippet.topLevelComment.snippet.textDisplay} */}
+                              {item.snippet.topLevelComment.snippet.textDisplay.length > 60
+                              ? `${item.snippet.topLevelComment.snippet.textDisplay.substring(0, 60)}... `
+                              : item.snippet.topLevelComment.snippet.textDisplay}
                             </p>
                             <div className="flex justify-start items-center gap-2">
                               <div className="flex justify-between items-center">
@@ -809,9 +816,9 @@ function VideoPage() {
               </div>
               <div className="w-full flex justify-between items-start">
                 <div className="h-full ">
-                  <div className="btn-circle w-11 h-11 flex justify-center items-center max-sm:w-6 max-sm:h-6 max-sm:text-[0.7rem] bg-slate-500">
+                  <div className="btn-circle w-11 h-11 flex justify-center items-center max-sm:w-6 max-sm:h-6 max-sm:text-[0.7rem] bg-slate-100">
                     {/* <img src={item.snippet.thumbnails.default.url} /> */}
-                    @@
+                    
                   </div>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-2 w-[95%] ">
@@ -874,10 +881,10 @@ function VideoPage() {
                     >
                       <div className="w-full flex justify-between items-start ">
                         <div className="h-full ">
-                          <div className="btn-circle w-11 h-11 flex justify-center items-center max-sm:w-6 max-sm:h-6 max-sm:text-[0.7rem] bg-slate-500">
+                          <div className="btn-circle w-11 h-11 flex justify-center items-center max-sm:w-6 max-sm:h-6 max-sm:text-[0.7rem] bg-slate-100">
                             <img
                               className="btn-circle w-full h-full"
-                              src="{}"
+                              // src="{}"
                             />
                             {/* @@ */}
                           </div>
@@ -1035,7 +1042,10 @@ function VideoPage() {
                             </details>
                           </div>
                           <p className="text-black text-[0.9rem] max-sm:text-[0.45rem]">
-                            {item.snippet.topLevelComment.snippet.textDisplay}
+                            {/* {item.snippet.topLevelComment.snippet.textDisplay} */}
+                            {item.snippet.topLevelComment.snippet.textDisplay.length > 60
+                              ? `${item.snippet.topLevelComment.snippet.textDisplay.substring(0, 60)}... `
+                              : item.snippet.topLevelComment.snippet.textDisplay}
                           </p>
                           <div className="flex justify-start items-center gap-2">
                             <div className="flex justify-between items-center">
