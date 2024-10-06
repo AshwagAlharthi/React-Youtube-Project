@@ -8,6 +8,7 @@ import Announcement from "../components/Announcement.jsx";
 import Login from "../pages/Login.jsx";
 import Register from "../pages/Register.jsx";
 import Search from "../pages/Search.jsx";
+import ErrorPage from "../pages/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <App />
+    element: <App />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/search/:searchValue",
